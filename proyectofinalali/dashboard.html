@@ -3,18 +3,40 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Inicio</title>
+  <title>Dashboard</title>
   <link rel="stylesheet" href="styles.css" />
   <script src="auth.js" defer></script>
 </head>
-<body>
-  <div id="msgBox"></div>
-  <main class="wrapper">
-    <section class="card">
-      <h1 class="title">Bienvenida al panel</h1>
-      <p>Tu inicio de sesión fue exitoso 🎉</p>
-      <button id="logoutBtn" class="logout-btn">Cerrar sesión</button>
+<body class="dashboard-body">
+
+  <header class="dashboard-header">
+    <h1 class="dashboard-title">Panel de Proyectos</h1>
+    <button id="logoutBtn" class="logout-btn">Cerrar sesión</button>
+  </header>
+
+  <main class="dashboard-main">
+    <button id="btnAddProject" class="btn-primary">Agregar Proyecto</button>
+
+    <section id="project-list" class="project-list">
+      <!-- Aquí se renderizan los proyectos -->
     </section>
   </main>
+
+  <!-- Modal para Crear / Editar Proyecto -->
+  <div id="modal" class="modal hidden">
+    <div class="modal-content">
+      <h2 id="modal-title">Nuevo Proyecto</h2>
+
+      <label>Nombre del Proyecto:</label>
+      <input type="text" id="projName" placeholder="Título del proyecto" />
+
+      <label>Descripción:</label>
+      <textarea id="projDesc" placeholder="Descripción breve"></textarea>
+
+      <button id="saveProject" class="btn-primary">Guardar</button>
+      <button id="closeModal" class="btn-secondary">Cancelar</button>
+    </div>
+  </div>
+
 </body>
 </html>
