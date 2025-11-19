@@ -1,4 +1,3 @@
-// auth.js — COMPLETO (login/register/logout + CRUD proyectos + validaciones)
 // API base
 const API_BASE = "https://portfolio-api-three-black.vercel.app/api/v1";
 
@@ -15,13 +14,6 @@ function mostrarMensaje(texto, tipo = "info") {
   msg.textContent = texto;
   msg.className = tipo;
   msg.style.display = "block";
-  // estilos mínimos inline por si falta CSS (opcional)
-  msg.style.position = "fixed";
-  msg.style.top = "20px";
-  msg.style.left = "50%";
-  msg.style.transform = "translateX(-50%)";
-  msg.style.zIndex = 9999;
-  setTimeout(() => { msg.style.display = "none"; }, 4000);
 }
 
 // -----------------------------
